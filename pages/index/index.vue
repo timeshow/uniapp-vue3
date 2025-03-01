@@ -3,7 +3,7 @@
         <image class="logo" src="/static/logo.png"></image>
         <up-button type="success" text="成功"></up-button>
         <view class="text-area">
-            <text class="title">欢迎, {{ userStore.userInfo.userInfo.username }}</text>
+            <text class="title">欢迎, {{ userStore.userInfo?.userInfo.username }}</text>
         </view>
     </view>
 </template>
