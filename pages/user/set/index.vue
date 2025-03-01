@@ -1,9 +1,9 @@
 <template>
-  <view>set</view>
+    <view>set</view>
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style></style>

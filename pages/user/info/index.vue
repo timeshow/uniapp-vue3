@@ -1,9 +1,9 @@
 <template>
-  <view>info</view>
+    <view>info</view>
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style></style>

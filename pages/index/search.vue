@@ -1,9 +1,9 @@
 <template>
-  <view>search</view>
+    <view>search</view>
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style></style>
