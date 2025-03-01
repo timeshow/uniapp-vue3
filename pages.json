@@ -25,6 +25,45 @@
         "enablePullDownRefresh": false,
         "navigationStyle": "custom"
       }
+    },
+    {
+      "path": "pages/index/login",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/index/search",
+      "style": {
+        "navigationBarTitleText": "搜索",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/index/page",
+      "style": {
+        "navigationBarTitleText": "活动页"
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "pages/user",
+      "pages": [
+        {
+          "path": "set/index",
+          "style": {
+            "navigationBarTitleText": "系统设置"
+          }
+        },
+        {
+          "path": "info/index",
+          "style": {
+            "navigationBarTitleText": "个人资料"
+          }
+        }
+      ]
     }
   ],
   "tabBar": {
@@ -51,7 +90,8 @@
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "backgroundColor": "#F8F8F8",
+    "h5": { "titleNView": false }
   },
   "uniIdRouter": {}
 }
