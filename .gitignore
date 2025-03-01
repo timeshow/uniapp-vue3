@@ -45,11 +45,9 @@ yarn-error.log*
 ._*
 
 # 忽略 TypeScript 编译输出
-*.js
 *.d.ts
 !src/**/*.js
 !src/**/*.d.ts
-!.eslintrc.js
 
 # 忽略测试相关文件
 coverage/
