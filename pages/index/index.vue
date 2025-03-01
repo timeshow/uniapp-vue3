@@ -3,21 +3,16 @@
     <image class="logo" src="/static/logo.png"></image>
     <up-button type="success" text="成功"></up-button>
     <view class="text-area">
-      <text class="title">{{ title }}</text>
+      <text class="title"
+        >欢迎, {{ userStore.userInfo.userInfo.username }}</text
+      >
     </view>
   </view>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      title: 'Hello',
-    };
-  },
-  onLoad() {},
-  methods: {},
-};
+<script setup>
+import { useUserStore } from '@/store/modules/user';
+const userStore = useUserStore();
 </script>
 
 <style>
