@@ -18,6 +18,26 @@
       }
     }
   ],
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#007AFF",
+    "borderStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/tabbar/index.png",
+        "selectedIconPath": "/static/tabbar/index-active.png"
+      },
+      {
+        "pagePath": "pages/index/user",
+        "text": "我的",
+        "iconPath": "/static/tabbar/user.png",
+        "selectedIconPath": "/static/tabbar/user-active.png"
+      }
+    ]
+  },
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
