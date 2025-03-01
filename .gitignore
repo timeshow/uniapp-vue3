@@ -49,6 +49,7 @@ yarn-error.log*
 *.d.ts
 !src/**/*.js
 !src/**/*.d.ts
+!.eslintrc.js
 
 # 忽略测试相关文件
 coverage/
