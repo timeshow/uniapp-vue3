@@ -6,6 +6,7 @@ export const useUserStore = defineStore('user', {
   state: () => ({
     token: '', // 用户 token
     userInfo: null, // 用户信息
+    isLogin: !!uni.getStorageSync('token'), // 登录状态
   }),
 
   // Getters（可选）
@@ -15,9 +16,16 @@ export const useUserStore = defineStore('user', {
 
   // Actions
   actions: {
-    // 设置 token
-    setToken(token) {
-      this.token = token;
+    // 设置token
+    setToken(token = '') {
+      if (token === '') {
+        this.isLogin = false;
+        uni.removeStorageSync('token');
+      } else {
+        this.isLogin = true;
+        uni.setStorageSync('token', token);
+      }
+      return this.isLogin;
     },
 
     // 设置用户信息

@@ -31,6 +31,7 @@
 import { ref } from 'vue';
 import { useUserStore } from '@/store/modules/user'; // 引入用户状态管理
 import { login } from '@/api/user'; // 引入登录接口
+import RouterUtils from '@/utils/router';
 
 // 表单数据
 const formData = ref({
@@ -74,12 +75,13 @@ const handleLogin = async () => {
 
       // 保存用户信息到状态管理
       const userStore = useUserStore();
+      userStore.setToken(
+        response.data.token.token_type + ' ' + response.data.token.token
+      );
       userStore.setUserInfo(response.data);
 
       // 跳转到首页
-      uni.switchTab({
-        url: '/pages/index/index',
-      });
+      RouterUtils.goTo('/pages/index/user', {}, 'switchTab');
     } else {
       // 登录失败
       errorMessage.value = response.message || '登录失败，请重试';
