@@ -56,7 +56,9 @@
         },
         "usingComponents": true,
         "mergeVirtualHostAttributes": true,
+        /* 按需引入 */
         "lazyCodeLoading": "requiredComponents",
+        /* 分包优化 */
         "optimization": {
             "subPackages": true
         }
