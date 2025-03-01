@@ -14,7 +14,16 @@
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "navigationBarTitleText": "首页",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/index/user",
+      "style": {
+        "navigationBarTitleText": "个人中心",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
       }
     }
   ],
