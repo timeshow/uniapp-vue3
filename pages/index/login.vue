@@ -26,8 +26,8 @@
 <script setup>
 import { ref } from 'vue'
 import { useUserStore } from '@/store/modules/user' // 引入用户状态管理
-import { login } from '@/api/user' // 引入登录接口
 import RouterUtils from '@/utils/router'
+import api from '@/api'
 
 // 表单数据
 const formData = ref({
@@ -60,7 +60,7 @@ const handleLogin = async () => {
         await form.value.validate()
 
         // 调用登录接口
-        const response = await login(formData.value)
+        const response = await api.user.index.login(formData.value)
 
         // 登录成功
         if (response.code == 0) {
